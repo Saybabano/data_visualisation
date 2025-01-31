@@ -1,0 +1,36 @@
+@baseurl=http://localhost:4000
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Ik5hbmRoYSIsImlhdCI6MTczNzQwMzIxMSwiZXhwIjoxNzM3NDg5NjExfQ.-U-JjpRUrHzZjUHpXKd3qB8zYj4k8aRsViZE1vDMthk
+
+###
+GET {{baseurl}}
+
+
+### Register User Account
+POST {{baseurl}}/auth/register
+Content-Type: application/json
+
+{
+  "name": "Nandha",
+  "email": "Nandha@example.com",
+  "password": "password123"
+}
+
+
+### Login User Account
+POST {{baseurl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "Nandha@example.com",
+  "password": "password123"
+}
+
+###Logout user
+POST {{baseurl}}/auth/logout
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+####
+GET {{baseurl}}/api/data?age=>25&gender=Female&start_date=2022-10-05&end_date=2022-10-07
+Authorization: Bearer {{token}}
+Content-Type: application/json
