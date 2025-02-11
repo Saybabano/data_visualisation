@@ -60,7 +60,7 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <div className="p-6 bg-green-300 text-white flex justify-between items-center shadow-lg">
-        <h1 className="text-2xl font-semibold">Good afternoon, <span className="text-gray-700">{localStorage.getItem("user_name") || "User"}</span></h1>
+        <h1 className="text-2xl font-semibold">Welcome to, <span className="text-gray-700">{localStorage.getItem("user_name") || "User"}</span></h1>
         <Logout />
       </div>
 
